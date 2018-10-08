@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 2 properties set here -->
+	<bean id="categoryBean" class="he.cscie57.spring5.autowireByName.domain.model.Category" autowire="byName">
+        <property name="id" value="1"/>
+        <property name="name" value="Poetry"/>
+    </bean>
+
+	<!-- 3rd property of Category Bean is set by name.
+	The name of the Category Bean property is book and the bean id here also named book -->
+    <bean id="book" class="he.cscie57.spring5.autowireByName.domain.model.Book">
+    	<property name="id" value="16"/>
+    	<property name="isbn" value="214745678"/>
+    	<property name="title" value="Shakespeare Poetry"/>
+    	<property name="price" value="36.59"/>
+    </bean>
+    
+</beans>

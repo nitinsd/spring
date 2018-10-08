@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="categoryBean" class="he.cscie57.spring5.autowireByConstructor.domain.model.Category" autowire="constructor">
+        <property name="id" value="1"/>
+        <property name="name" value="Poetry"/>
+    </bean>
+
+    <bean id="bookPushkin" class="he.cscie57.spring5.autowireByConstructor.domain.model.Book">
+    	<property name="id" value="17"/>
+    	<property name="isbn" value="214745111"/>
+    	<property name="title" value="Pushkin Poetry"/>
+    	<property name="price" value="42.19"/>
+    </bean>
+    
+</beans>

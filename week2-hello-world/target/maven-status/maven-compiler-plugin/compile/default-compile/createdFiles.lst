@@ -1,0 +1,10 @@
+com\apress\prospring5\ch2\annotated\HelloWorldSpringAnnotated.class
+com\apress\prospring5\ch2\decoupled\HelloWorldDecoupled.class
+com\apress\prospring5\ch2\decoupled\MessageProvider.class
+com\apress\prospring5\ch2\HelloWorld.class
+com\apress\prospring5\ch2\decoupled\StandardOutMessageRenderer.class
+com\apress\prospring5\ch2\decoupled\MessageRenderer.class
+com\apress\prospring5\ch2\HelloWorldSpringDI.class
+com\apress\prospring5\ch2\decoupled\HelloWorldMessageProvider.class
+com\apress\prospring5\ch2\annotated\HelloWorldConfiguration.class
+com\apress\prospring5\ch2\HelloWorldWithCommandLine.class

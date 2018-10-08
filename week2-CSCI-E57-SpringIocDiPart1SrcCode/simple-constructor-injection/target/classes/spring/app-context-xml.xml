@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.apress.prospring5.ch3.bean.Student"> 
+          <constructor-arg value="1000" type="int"></constructor-arg>
+          <constructor-arg value="Tim" type="String"></constructor-arg>
+          <constructor-arg value="Wolf" type="String"></constructor-arg>
+          <constructor-arg value="20" type="int"></constructor-arg>
+          <constructor-arg value="Computer Science" type="String"></constructor-arg>
+     </bean>
+</beans>

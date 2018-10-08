@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/> <!-- using annotation for autowiring -->
+	
+	<bean id="categoryBean" class="he.cscie57.spring5.autowireBySetter.domain.model.Category">
+        <property name="id" value="1"/>
+        <property name="name" value="Poetry"/>
+    </bean>
+
+	<!-- This book is autowired in Category Bean by type. Bean id does not have to be named book -->
+    <bean id="bookWhitman" class="he.cscie57.spring5.autowireBySetter.domain.model.Book">
+    	<property name="id" value="15"/>
+    	<property name="isbn" value="214745666"/>
+    	<property name="title" value="Whitman Poetry"/>
+    	<property name="price" value="26.59"/>
+    </bean>
+    
+</beans>

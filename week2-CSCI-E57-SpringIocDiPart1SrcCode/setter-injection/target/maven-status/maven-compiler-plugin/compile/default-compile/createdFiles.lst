@@ -1,0 +1,8 @@
+com\apress\prospring5\ch3\annotation\HelloWorldMessageProvider.class
+com\apress\prospring5\ch3\DeclareSpringComponentsAnnotation.class
+com\apress\prospring5\ch3\xml\HelloWorldMessageProvider.class
+com\apress\prospring5\ch3\DeclareSpringComponentsXml.class
+com\apress\prospring5\ch3\MessageProvider.class
+com\apress\prospring5\ch3\xml\StandardOutMessageRenderer.class
+com\apress\prospring5\ch3\annotation\StandardOutMessageRenderer.class
+com\apress\prospring5\ch3\MessageRenderer.class

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="bookBean1" class="he.cscie57.spring5.collections.domain.model.Book">
+    <constructor-arg value="1" type="Long"></constructor-arg>
+    <constructor-arg value="123456789" type="String"></constructor-arg>
+    <constructor-arg value="Crime and Punishment" type="String"></constructor-arg>
+    <constructor-arg value="28.45" type="Float"></constructor-arg>
+</bean>
+
+<bean id="categoryBeanSet" class="he.cscie57.spring5.collections.domain.model.Category">
+	<property name="id" value="2"/>
+	<property name="name" value="Novels"/>
+	<property name="booksSet">
+		<set>
+   			<ref bean="bookBean1"/> <!-- using reference, bookBean1 created using constructor injection -->
+   			<bean id="bookBean2" class="he.cscie57.spring5.collections.domain.model.Book"> <!-- direct instance -->
+      			<property name="id" value="2"/>
+      			<property name="isbn" value="123225678"/>
+      			<property name="title" value="Misery"/>
+      			<property name="price" value="24.95"/>
+   			</bean>
+		</set>
+	</property>
+</bean>
+
+<bean id="bookBean3" class="he.cscie57.spring5.collections.domain.model.Book" 
+	p:id="10" p:isbn="987456789" p:title="Core Java" p:price="34.99"/>
+	
+<bean id="categoryBeanList" class="he.cscie57.spring5.collections.domain.model.Category">
+	<property name="id" value="3"/>
+	<property name="name" value="Java"/>
+	<property name="booksList">
+		<list>
+   			<ref bean="bookBean3"/> <!-- using reference, bookBean2 created using setter injection -->
+   			<bean id="bookBean4" class="he.cscie57.spring5.collections.domain.model.Book"> <!-- direct instance -->
+      			<property name="id" value="3"/>
+      			<property name="isbn" value="553225678"/>
+      			<property name="title" value="Java in Nutshell"/>
+      			<property name="price" value="20.35"/>
+   			</bean>
+		</list>
+	</property>
+</bean>
+
+<bean id="bookBean5" class="he.cscie57.spring5.collections.domain.model.Book" 
+	p:id="11" p:isbn="367456789" p:title="Shakespeare Poetry" p:price="24.25"/>
+	
+<bean id="bookBean6" class="he.cscie57.spring5.collections.domain.model.Book" 
+	p:id="4" p:isbn="043225678" p:title="Pushkin Poetry" p:price="27.95"/>
+
+<bean id="categoryBeanMap" class="he.cscie57.spring5.collections.domain.model.Category">
+	<property name="id" value="4"/>
+	<property name="name" value="Poetry"/>
+	<property name="booksMap">
+		<map>
+            <entry key="#{ bookBean5.id }" value-ref="bookBean5"/> <!-- using expression -->
+            <entry key="#{ bookBean6.id }" value-ref="bookBean6"/> <!-- using expression -->
+		</map>
+	</property>
+</bean>
+
+</beans>
